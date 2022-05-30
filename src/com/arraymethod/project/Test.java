@@ -9,7 +9,9 @@ public abstract class Test {
         number.add(2);
         number.add(5);
         number.add(4);
+        number.add(12);
+        number.add(12);
 
-        ArrayNumber.getArrayList(number);
+        PairSetting.getArrayList(number);
     }
 }
