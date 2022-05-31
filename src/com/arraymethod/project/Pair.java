@@ -1,6 +1,7 @@
 package com.arraymethod.project;
 
-public interface Pair<T,S> extends Comparable<Pair<T,S>> {
+public interface Pair<T extends Number, S extends Number> {
     T getFirst();
+
     S getSecond();
 }
