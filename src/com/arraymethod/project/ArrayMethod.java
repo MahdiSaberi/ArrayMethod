@@ -9,23 +9,25 @@ public class ArrayMethod{
     public void getArrayList(ArrayList<Integer> numbers){
 
         //fix length
-        if(numbers.size() % 2 == 1)
-            numbers.remove(numbers.size()-1);
+        if (numbers.size() % 2 == 1)
+            numbers.remove(numbers.size() - 1);
         //
 
         Iterator it = numbers.iterator();
         int index = 0;
 
-        while(it.hasNext()){
+        for (int i = 0; i < numbers.size(); i = i + 2)
+            System.out.print("(" + numbers.get(i) + ", " + numbers.get(i + 1) + "), ");
 
-                if (index % 2 == 0) {
-                    if(numbers.size() > index){
+        while (it.hasNext()) {
 
-                        if (numbers.get(index) > numbers.get(index + 1)) {
+            if (index % 2 == 0) {
+                if (numbers.size() > index) {
 
-                            numbers.remove(index);
-                            numbers.remove(index);
-                            it = numbers.iterator();
+                    if (numbers.get(index) > numbers.get(index + 1)) {
+                        numbers.remove(index);
+                        numbers.remove(index);
+                        it = numbers.iterator();
                             index = 0;
                         }
 
@@ -52,6 +54,7 @@ public class ArrayMethod{
         //}
 
         //numbers.removeAll(Collections.singleton(-999));
+        System.out.println();
         System.out.println(numbers);
     }
 
